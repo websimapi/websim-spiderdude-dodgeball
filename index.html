@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title>Spiderdude Dodgeball</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="title-screen" class="title-screen">
+    <h1>Spiderdude Dodgeball</h1>
+    <p class="tagline">"MY TARANTULA SENSES! THEY BURN!"</p>
+    <div class="menu-buttons">
+      <button id="start-game">Start Game</button>
+      <button id="show-instructions">Instructions</button>
+    </div>
+  </div>
+
+  <div id="instructions-screen" class="instructions-screen">
+    <h2>How to Play</h2>
+    <ul>
+      <li>Click and hold to shoot a rope from the nearest hand to the ceiling</li>
+      <li>Release to drop the rope</li>
+      <li>Press 'A' and 'D' to move left and right</li>
+      <li>Watch out for the flying balls! You have 10 lives</li>
+      <li>Hold 'S' to activate tarantula senses!</li>
+    </ul>
+    <button id="back-to-menu">Back to Menu</button>
+  </div>
+
+  <div id="game-container" class="hidden">
+    <div id="canvas-container" style="position: relative;">
+      <div class="health-display"></div>
+      <div class="score-container">
+        <div class="stopwatch">00:00.00</div>
+        <div class="high-scores">
+          <div class="score-section">
+            <h3>Personal Best</h3>
+            <ul class="score-list personal-scores"></ul>
+          </div>
+        </div>
+      </div>
+      <canvas id="canvas"></canvas>
+      <div class="slow-motion-container">
+        <div class="slow-motion-label">SLOW MOTION</div>
+        <div class="slow-motion-bar"></div>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="reset">Reset Ragdoll</button>
+    </div>
+    <div class="game-over">
+      <h2>Game Over!</h2>
+      <p class="final-time"></p>
+      <button class="reset-button" onclick="resetGame()">Restart Game</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+  <script src="scores.js"></script>
+  <script src="ragdoll.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
